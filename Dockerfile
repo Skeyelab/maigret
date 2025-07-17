@@ -13,4 +13,4 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* /tmp/*
 COPY . .
 RUN YARL_NO_EXTENSIONS=1 python3 -m pip install --no-cache-dir .
-ENTRYPOINT ["maigret"]
+ENTRYPOINT ["maigret", "--web", "3000"]
